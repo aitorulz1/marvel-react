@@ -1,7 +1,3 @@
-import { Inter } from '@next/font/google'
-import { useEffect, useState } from 'react';
-import {Md5} from 'ts-md5'
-import axios from 'axios'
 import Link from 'next/link';
 
 interface Cards {
@@ -38,7 +34,7 @@ const filteredHero = character.filter((hero:Cards) => {
 return (       
       <div className="text-3xl font-bold table w-full">
         { filteredHero ?
-          filteredHero.map( character => (
+          filteredHero.map( (character:any) => (
             <Link href={`/cards/${character.id}`}>
               <div className="relative float-left w-1/3 p-3" key={character.id}>
               <div className="h-64 overflow-hidden">

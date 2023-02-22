@@ -1,4 +1,3 @@
-import { Inter } from '@next/font/google'
 import {FaSearch} from 'react-icons/fa'
 import { RxCross1 } from "react-icons/rx";
 import { useEffect, useState } from 'react';
@@ -26,13 +25,15 @@ useEffect(() => {
  
 
 const [inputText, setInputText] = useState("");
-  let inputHandler = (e: React.FormEvent<HTMLInputElement>) => {
+
+let inputHandler = (e: React.FormEvent<HTMLInputElement>) => {
     var hero = (e.target as HTMLInputElement).value;
     setInputText(hero);
 };
 
-const onClickEmptyInput = () => {
-    setInputText("")    
+const onClickCleanInput = (e: React.FormEvent<HTMLInputElement>)  => {
+ (e.target as HTMLInputElement).value;
+    setInputText("");
 }
 
 
@@ -42,8 +43,8 @@ return (
     <>
         <div className="table bg-white w-full text-4-xl border-b-[2px] border-red-500 border-solid mb-8">
             <FaSearch className="fill-red-500 text-4-xl -mb-3 table float-left w-1/9" />
-                <input onChange={inputHandler} type="search" id="default-search" className="block bg-white outline-0 ml-6 float-left w-8/9 text-lg pb-1 text-black"  />
-            <button className='w-1/9 float-right cursor-pointer' onClick={onClickEmptyInput}>
+                <input onChange={inputHandler}  type="search"  className="block bg-white outline-0 ml-6 float-left w-8/9 text-lg pb-1 text-black" />
+            <button className='w-1/9 float-right cursor-pointer' onClick={() => onClickCleanInput} >
                 <RxCross1 className="fill-red-500 text-4-xl -mb-3 text-red-500 font-black cursor-pointer" />
             </button>
         </div>     
