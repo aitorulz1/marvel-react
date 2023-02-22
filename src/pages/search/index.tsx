@@ -27,7 +27,7 @@ useEffect(() => {
 const [inputText, setInputText] = useState("");
 
 let inputHandler = (e: React.FormEvent<HTMLInputElement>) => {
-    var hero = (e.target as HTMLInputElement).value;
+    var hero = (e.target as HTMLInputElement).value.toLowerCase();
     setInputText(hero);
 };
 

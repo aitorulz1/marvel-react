@@ -14,3 +14,13 @@ export default function getCharacters():string {
 export function getCharacterById(id:number): string {
     return `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=${ts}&apikey=${publicKey}&hash=${hashedUrl}`
 }
+
+export function getComicByCharacter(heroId:number, heroName:string): string {
+    return `https://gateway.marvel.com:443/v1/public/comics/${heroId}/characters?name=${heroName}&nameStartsWith=t&?ts=${ts}&apikey=${publicKey}&hash=${hashedUrl}`    
+}
+
+export function getStorieUrl(heroId:number):string {
+    return `https://gateway.marvel.com:443/v1/public/characters/${heroId}/stories?limit=4&?ts=1&apikey=80cfbf0427cd24a523e8b548829e905f&hash=2784c78f197ae297fb526f9425b061fd`
+    // `https://gateway.marvel.com:443/v1/public/characters/1011334/stories?limit=4&?ts=1&apikey=80cfbf0427cd24a523e8b548829e905f&hash=2784c78f197ae297fb526f9425b061fd`
+}
+
