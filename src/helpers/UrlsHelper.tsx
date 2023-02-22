@@ -22,5 +22,10 @@ export function getComicByCharacter(heroId:number, heroName:string): string {
 export function getStorieUrl(heroId:number):string {
     return `https://gateway.marvel.com:443/v1/public/characters/${heroId}/stories?limit=4&?ts=1&apikey=80cfbf0427cd24a523e8b548829e905f&hash=2784c78f197ae297fb526f9425b061fd`
     // `https://gateway.marvel.com:443/v1/public/characters/1011334/stories?limit=4&?ts=1&apikey=80cfbf0427cd24a523e8b548829e905f&hash=2784c78f197ae297fb526f9425b061fd`
+    // https://gateway.marvel.com/v1/public/comics/1011334/characters?name=3-dman&ts=1&apikey=80cfbf0427cd24a523e8b548829e905f&hash=2784c78f197ae297fb526f9425b061fd
+}
+
+export function getStoryById(storyId:number):string {
+    return `https://gateway.marvel.com:443/v1/public/stories/${storyId}/comics?ts=1&apikey=80cfbf0427cd24a523e8b548829e905f&hash=2784c78f197ae297fb526f9425b061fd`
 }
 

@@ -42,7 +42,7 @@ return (
     <>
         <div className="table bg-white w-full text-4-xl border-b-[2px] border-red-500 border-solid mb-8">
             <FaSearch className="fill-red-500 text-4-xl -mb-3 table float-left w-1/9" />
-                <input id="supers" onChange={inputHandler}  type="search" value={inputText}  className="block bg-white outline-0 ml-6 float-left w-8/9 text-lg pb-1 text-black" />
+                <input id="supers" onChange={inputHandler}  type="search" value={inputText}  className="block bg-white outline-0 ml-6 float-left w-[calc(100%_-_5rem)] text-lg pb-1 text-black" />
             <button className='w-1/9 float-right cursor-pointer' onClick={onClickCleanInput} type='reset' >
                 <RxCross1 className="fill-red-500 text-4-xl -mb-3 text-red-500 font-black cursor-pointer" />
             </button>
