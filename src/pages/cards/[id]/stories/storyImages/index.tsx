@@ -26,7 +26,7 @@ export default function StoryImages(props:any){
       }, []);
 
     return(
-        <div>
+        <div className="">
             <img src={`${storyUrl.path}.${storyUrl.extension}`} />
         </div>
         

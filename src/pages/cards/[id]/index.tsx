@@ -21,7 +21,7 @@ export default function CardId() {
   
   useEffect(() => {
     const consultarApi = async () => {
-      axios.get(getCharacterById(`${id}`))
+      axios.get(getCharacterById(id))
       .then(response => {    
         setCharacter(response.data.data.results);        
     }).catch(error => console.log(error));

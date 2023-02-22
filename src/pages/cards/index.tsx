@@ -36,7 +36,7 @@ return (
         { filteredHero ?
           filteredHero.map( (character:any) => (
             <Link href={`/cards/${character.id}`}>
-              <div className="relative float-left w-1/3 p-3" key={character.id}>
+              <div className="relative float-left md:w-1/2 lg:w-1/3 p-3" key={character.id}>
               <div className="h-64 overflow-hidden">
                 <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} className="md:w-full" />
                 </div>
