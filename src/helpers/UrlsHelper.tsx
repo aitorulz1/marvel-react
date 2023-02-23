@@ -20,6 +20,6 @@ export function getComicByCharacter(heroId:number, heroName:string): string {
 }
 
 export function getStoryById(storyId:number):string {
-    return `https://gateway.marvel.com:443/v1/public/stories/${storyId}/comics?ts=1&apikey=80cfbf0427cd24a523e8b548829e905f&hash=2784c78f197ae297fb526f9425b061fd`
+    return `https://gateway.marvel.com:443/v1/public/stories/${storyId}/comics?ts=${ts}&apikey=${publicKey}&hash=${hashedUrl}`
 }
 
