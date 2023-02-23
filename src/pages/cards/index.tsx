@@ -11,7 +11,7 @@ interface Cards {
   stories: object,
   thumbnail: object,
   inputText: string,
-  character: any | undefined,
+  character: any,
   urls: [],
 }
 

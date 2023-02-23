@@ -11,12 +11,13 @@ interface StoryImage {
   series: object,
   stories: object,
   thumbnail: object,
-  urls: []
+  hero: any,
+  urls: [],
 }
 
 export const Stories = (props:StoryImage) => {
 
-  const {hero} = props
+  const { hero } = props
 
   if(!hero) {
     return
