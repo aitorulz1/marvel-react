@@ -8,14 +8,22 @@ Haciendo click en este, nos llevará a su single page donde podremos encontrar m
 
 La APP de Marvel ha sido realizada con React, NextJs 13, Typescript y, para los estilos, Tailwind.
 
+Los logos del header son clickables.
+
 # Primeros pasos
 
+- Funciona con node v 14. De lo contrario no instalará dependencias con npm i
 - Fork this Repo
 - Clone this Repo "git clone + url"
 
 ```sh
 git clone https://github.com/aitorulz1/marvel-react.git
 ```
+
+# Versión Node
+
+- Imprescindible utilizar con versión 14
+- No funciona en versión 16
 
 # Clonado
 
@@ -30,6 +38,12 @@ Podemos arrancar la aplicación usando
 ```sh
 npm run dev
 ```
+
+# Posibles mejoras
+
+- Si el filtrado no fuera local sino por API, usaría debouncing para esperar a que el usuario termine de escribir en el input. En éste caso, haríamos que la lupa fuese un botón que realizara la acción de la búsqueda y realizar la petición, pero en éste caso, no es lo que se pedía.
+
+# Correr la aplicación
 
 La aplicación se abrirá en [http://localhost:3000/]
 
