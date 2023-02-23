@@ -11,7 +11,6 @@ import{ ButtonToComics } from './button'
 import{ Stories } from './stories'
 
 
-
 export default function CardId() {
 
   const { query } = useRouter()

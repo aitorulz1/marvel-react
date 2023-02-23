@@ -10,17 +10,17 @@ interface Cards {
   series: object,
   stories: object,
   thumbnail: object,
-  inputText: string | undefined,
+  inputText: string,
   character: any | undefined,
   urls: [],
 }
 
-export default function Cards(props:any) {
+export default function Cards(props:Cards) {
 
 const { inputText, character } = props
 
 if(!character) {
-  return null
+  return 
 }
 
 const filteredHero = character.filter((hero:Cards) => {
@@ -35,7 +35,7 @@ return (
       <div className="text-3xl font-bold table w-full">
         { filteredHero ?
           filteredHero.map( (character:any) => (
-            <Link href={`/cards/${character.id}`}>
+            <Link key={character.id} href={`/cards/${character.id}`}>
               <div className="relative float-left md:w-1/2 lg:w-1/3 p-3" key={character.id}>
               <div className="h-64 overflow-hidden">
                 <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} className="md:w-full" />
@@ -49,6 +49,5 @@ return (
           )) : <p>Nothing to show</p>
         }
       </div>
-
   )
 }

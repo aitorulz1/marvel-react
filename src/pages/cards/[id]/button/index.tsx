@@ -19,7 +19,6 @@ export const ButtonToComics = (props:any) => {
     consultarApi();
   }, []);
 
-  // saveRoute[0].urls.filter(route => route.type === 'comiclink')
   const [ getRoute, setGetRoute ] = useState("")
   useEffect(() => {
     if(saveRoute) {

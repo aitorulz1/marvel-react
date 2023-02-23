@@ -35,9 +35,6 @@ const onClickCleanInput = ()  => {
     setInputText("")
 }
 
-
-
-
 return (  
     <>
         <div className="table bg-white w-full text-4-xl border-b-[2px] border-red-500 border-solid mb-8">
