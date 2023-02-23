@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import { getCharacterById } from '../../../helpers/UrlsHelper';
-import { getComicByCharacter } from '../../../helpers/UrlsHelper';
 import Link from 'next/link';
 import { FaArrowAltCircleLeft } from 'react-icons/fa';
 
@@ -10,13 +9,32 @@ import { Header } from '@/components/Header';
 import{ ButtonToComics } from './button'
 import{ Stories } from './stories'
 
+type Character = {
+  comics: object,
+  description: string,
+  events: object,
+  id: number,
+  modified: string,
+  name: string,
+  resourceURI: string,
+  series: {
+    available: string,
+  },
+  stories: object,
+  thumbnail: {
+    path: string,
+    extension: string,
+  },
+  hero: object,
+  urls: [],
+}
 
 export default function CardId() {
 
   const { query } = useRouter()
   const id = query.id
 
-  const [ character, setCharacter ]:any[] = useState([])
+  const [ character, setCharacter ] = useState([])
   
   useEffect(() => {
     const consultarApi = async () => {
@@ -27,6 +45,8 @@ export default function CardId() {
     };
     consultarApi();
   }, []);
+
+  console.log(character)
   
 return (      
   <>
@@ -36,7 +56,7 @@ return (
           <Link href="/"><FaArrowAltCircleLeft className="fill-red-600 cursor-pointer absolute right-14" size={35} /></Link>
         </div>
         { character ?
-          character.map( (hero:any) => (
+          character.map( (hero:Character) => (
           <>
             <div className="relative mx-auto w-3/6 max-w-xl pb-28" key={hero.id}>
               {/* name */}

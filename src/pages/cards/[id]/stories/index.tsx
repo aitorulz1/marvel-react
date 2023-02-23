@@ -1,30 +1,18 @@
 import StoryImages from './storyImages'
+import { StoryImage } from '../../../../types/StoryImage';
 
-interface StoryImage {
-  comics: object,
-  description: string,
-  events: object,
-  id: number,
-  modified: string,
-  name: string,
-  resourceURI: string,
-  series: object,
-  stories: object,
-  thumbnail: object,
-  hero: any,
-  urls: [],
+interface Props {
+  storyImage: StoryImage
 }
 
-export const Stories = (props:StoryImage) => {
+export const Stories = (props:Props) => {
 
   const { hero } = props
 
   if(!hero) {
     return
   }
-
-  console.log(props)
-
+  console.log(hero)
   const heroStories = hero.stories.items
   
   const lastFour = heroStories.slice(heroStories.length - 4)

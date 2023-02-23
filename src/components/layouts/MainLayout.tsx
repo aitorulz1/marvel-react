@@ -1,4 +1,4 @@
-export const MainLayout = ({children}:any) => {
+export const MainLayout = ({children}) => {
 
     return(    
     <div className="bg-white">
